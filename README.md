@@ -1,8 +1,6 @@
 # ping
 pong the rpg
 
-Ideas for the game
-
 _enemy ability ideas(skills enemies use)_
 - dissapearing ball( a second or two)
 - phantom split(one fake splits off from the main one to fake out the player)
