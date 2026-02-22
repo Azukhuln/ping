@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class ball : MonoBehaviour
 {
@@ -7,13 +9,17 @@ public class ball : MonoBehaviour
     Rigidbody2D rb;
     public Vector2 startPos;
 
+    string sceneName;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
 
        startPos = transform.position;
        rb = GetComponent<Rigidbody2D>();
+       sceneName = SceneManager.GetActiveScene().name;
        launch();
+       setSpeed();
 
     }
 
@@ -31,6 +37,16 @@ public class ball : MonoBehaviour
         }
 
         rb.linearVelocity = new Vector2(x * ballSpeed, y *ballSpeed);
+    }
+    
+    public void setSpeed()
+    {
+        if (sceneName == "Level 1") { ballSpeed = 4.75f; }
+        else if (sceneName == "Level 2") { ballSpeed = 4.90f; }
+        else if (sceneName == "Level 3") { ballSpeed = 5.35f; }
+        else if (sceneName == "Level 4") { ballSpeed = 5.85f; }
+        else if (sceneName == "Level 5") { ballSpeed = 6.25f; }
+        
     }
     // add ability modifiers
 

@@ -30,11 +30,11 @@ public class bot_player : MonoBehaviour
     // Update is called once per frame
     void setDifficulty()
     {
-        if (sceneName == "Level 1") { speed = 1.75f; }
-    else if (sceneName == "Level 2") { speed = 3f; }
-    else if (sceneName == "Level 3") { speed = 3.5f; }
-    else if (sceneName == "Level 4") { speed = 4.25f; }
-    else if (sceneName == "Level 5") { speed = 5f; }
+        if (sceneName == "Level 1") { speed = 3f; }
+    else if (sceneName == "Level 2") { speed = 3.75f; }
+    else if (sceneName == "Level 3") { speed = 4.5f; }
+    else if (sceneName == "Level 4") { speed = 5.25f; }
+    else if (sceneName == "Level 5") { speed = 5.85f; }
     }
 
     void setHealth()
