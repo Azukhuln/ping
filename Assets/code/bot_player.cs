@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class bot_player : MonoBehaviour
 {
     [SerializeField]GameObject Ball;
+    [SerializeField] healthCounter botHealth;
 
     //[SerializeField] float reactionTime = 0.2f; // Lower = harder
 
@@ -22,19 +23,34 @@ public class bot_player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sceneName = SceneManager.GetActiveScene().name;
         setDifficulty();
+        setHealth();
         //setSkill(speed); //set the bot ability/skill example ideas phantom ball, stop player, ect.
     }
 
     // Update is called once per frame
     void setDifficulty()
     {
-        if (sceneName == "Level 1") { speed = 2.75f; }
+        if (sceneName == "Level 1") { speed = 1.75f; }
     else if (sceneName == "Level 2") { speed = 3f; }
     else if (sceneName == "Level 3") { speed = 3.5f; }
     else if (sceneName == "Level 4") { speed = 4.25f; }
     else if (sceneName == "Level 5") { speed = 5f; }
     }
 
+    void setHealth()
+    {
+        if (botHealth == null){
+            Debug.LogError("botHealth is NOT assigned in the Inspector! Please drag the Bot's health counter to this field.");
+           return;
+        }
+        if (sceneName == "Level 1") { botHealth.UnitHealth = 5; }
+        else if (sceneName == "Level 2") { botHealth.UnitHealth = 6; }
+        else if (sceneName == "Level 3") { botHealth.UnitHealth = 7; }
+        else if (sceneName == "Level 4") { botHealth.UnitHealth = 8; }
+        else if (sceneName == "Level 5") { botHealth.UnitHealth = 10; }
+        
+    }
+        
     void MoveTowardTarget()
     {
         if (targetY > transform.position.y)

@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: addd0b0fb8e986a4fa4aed525ca8f26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::healthCounter
-  unitHealth: 7
+  punitHealth: 5
 --- !u!1 &272861721
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,7 +422,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::scorenet
   ballMovement: {fileID: 863789353}
-  userHealth: {fileID: 123009874}
+  userHealth: {fileID: 677139711}
+  botHealth: {fileID: 123009874}
+  side: bot
 --- !u!1 &400054468
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,6 +681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   Ball: {fileID: 863789348}
+  botHealth: {fileID: 123009874}
 --- !u!50 &412437792
 Rigidbody2D:
   serializedVersion: 5
@@ -1077,7 +1080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: addd0b0fb8e986a4fa4aed525ca8f26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::healthCounter
-  unitHealth: 5
+  punitHealth: 5
 --- !u!1 &863789348
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,6 +1762,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::scorenet
   ballMovement: {fileID: 863789353}
   userHealth: {fileID: 677139711}
+  botHealth: {fileID: 123009874}
+  side: Player
 --- !u!1 &1633528512
 GameObject:
   m_ObjectHideFlags: 0

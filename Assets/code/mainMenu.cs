@@ -6,6 +6,10 @@ public class mainMenu : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void startGame()
     {
+        if(GameManager.Instance != null)
+        {
+            GameManager.Instance.ResetToLevelOne();
+        }
         SceneManager.LoadScene("Level 1");
     }
 
