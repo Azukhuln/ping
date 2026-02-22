@@ -1,6 +1,27 @@
 # ping
 pong the rpg
+Welcome to pong but now you are faced with 5 levels each with more health, enemy speed, and ball speed
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Original IDEAS
 _enemy ability ideas(skills enemies use)_
 - dissapearing ball( a second or two)
 - phantom split(one fake splits off from the main one to fake out the player)
